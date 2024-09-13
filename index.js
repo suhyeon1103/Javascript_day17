@@ -13,17 +13,16 @@
 //   b) `Hello, ${name}!`
 //   c) `Hello, undefined!`
 //   d) 에러 발생
-// 답 : b
+// 답 : a
     
 // 문제 3. 템플릿 리터럴을 사용하여 여러 줄의 문자열을 어떻게 작성할 수 있나요?
 // let message = `This is line 1.
 // This is line 2.
-// This is line 3.`;
-// console.log(message);
+// This is line 3.
+// `;
 
 //문제 4. 배열 디스트럭처링을 사용하여 변수 `first`와 `second`에 `[10, 20]`을 할당하는 코드를 작성하세요.
-// const numbers = [10, 20];
-// const [first, second] = numbers;
+// const [first, second] = [10, 20];
 
 // console.log(first);
 // console.log(second);
@@ -38,17 +37,15 @@
 // 문제 6. 디스트럭처링 할당에서 기본값을 설정할 수 있나요? (예 or 아니요)
 // 답 : 예 
 
-
 //문제 7. 스프레드 연산자를 사용하여 두 배열 `[1, 2]`와 `[3, 4]`를 결합하는 코드를 작성하세요.
 // const arr1 = [1,2];
 // const arr2 = [3,4];
-// const combined = [...arr1, ...arr2];
+// const result = [...arr1, ...arr2];
 
-// console.log(combined);
+// console.log(result);
 
 // 문제 8. 스프레드 연산자를 사용하면 배열을 **깊은 복사**할 수 있다. (참 or 거짓)
 // 답 : 거짓 (얕은 복사만 수행함)
-
 
 //문제 9. 아래 코드를 실행했을 때 출력 결과는 무엇인가요?
 // const arr = [1, 2];
@@ -76,7 +73,6 @@
 // }
     
 // printNumbers(1, 2, 3, 4);
-
     
 // a) `1`과 `[2, 3, 4]`
 // b) `1`과 `[1, 2, 3, 4]`
@@ -98,8 +94,10 @@
 // console.log(add(2,3));
     
 //문제 14. 여러 함수를 ***명시적 내보내기(named export)***로 내보내는 예시 코드를 작성하세요.
-
 // // 파일 이름: math.js:
+
+//export const pi = 3.14;
+
 // export function add(a, b) {
 //     return a + b;
 // }
@@ -109,8 +107,9 @@
 // }
 
 // // main.js
-// import { add, subtract } from './math.js';
+// import { pi, add, subtract } from './math.js';
 
+// console.log(pi);
 // console.log(add(2,3));
 // console.log(subtract(5,3));
 
@@ -126,12 +125,13 @@
 // console.log(subtraction(5,2));
 
 // 16. 모듈 시스템에서 동적 import는 무엇을 위한 것인가요?
-    
+// --> 동적 import 어떤게 좋은지?
+// 컴퓨터는 한정적 자원을 가짐 > 필요한 시점에 로드 > 필요없는 로드가 줄어듬 > 상대적으로 초기로딩속도가 빨라짐
 // a) 정적인 코드를 동적으로 만들기 위함
 // b) 파일을 비동기적으로 불러오기 위함
 // c) 변수를 글로벌 스코프로 만들기 위함
 // d) 모듈을 전역 네임스페이스로 가져오기 위함
-// 답 : b
+// 답 : b 
 
 // **ES6 기능 관련 Recap (복습)**
 
